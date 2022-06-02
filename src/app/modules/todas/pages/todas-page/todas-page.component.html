@@ -14,25 +14,27 @@
 </div>
 <div class="container py-2 px-4">
     <ul class="list-group list-group-flush">
-        <li class="list-group-item pastilla" *ngFor="let tarea of tareas; let i=index">
-            <div class="tarea" *ngIf="tarea.descartada != true">
-                <div class="tarea-info">
-                    <i class="uil uil-clipboard-notes"></i><p [ngClass]="{'completada': tarea.completada}">{{tarea.titulo}}</p>
-                    <p [ngClass]="{'completada': tarea.completada}">{{tarea.descripcion}}</p>
-                </div>
-                <div class="tarea-boton">
-                    
-                    <div>
-                        <button type="button" class="btn btn_trash" (click)="borrarTarea(i)">
-                            <i class="uil uil-trash-alt"></i>
-                        </button>
+        <ng-container *ngFor="let tarea of tareas; let i=index">
+            <li *ngIf="tarea.descartada != true" class="list-group-item pastilla">
+                <div class="tarea">
+                    <div class="tarea-info">
+                        <i class="uil uil-clipboard-notes"></i><p [ngClass]="{'completada': tarea.completada}">{{tarea.titulo}}</p>
+                        <p [ngClass]="{'completada': tarea.completada}">{{tarea.descripcion}}</p>
                     </div>
-                    <div class="check-control">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" [checked]="tarea.completada" disabled>
-                        <button class="btn btn_completado" (click)="completarTarea(i)" >COMPLETADO</button>
+                    <div class="tarea-boton">
+                        
+                        <div>
+                            <button type="button" class="btn btn_trash" (click)="borrarTarea(i)">
+                                <i class="uil uil-trash-alt"></i>
+                            </button>
+                        </div>
+                        <div class="check-control">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" [checked]="tarea.completada" disabled>
+                            <button class="btn btn_completado" (click)="completarTarea(i)" >COMPLETADO</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </li>
+            </li>
+        </ng-container>
     </ul>
 </div>
