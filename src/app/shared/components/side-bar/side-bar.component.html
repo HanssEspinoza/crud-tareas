@@ -1,0 +1,9 @@
+<div id="div-desktop" class="side-bar">
+    <ul class="side-bar__list list-one">
+        <li [routerLink]="item.router" *ngFor="let item of mainMenu.defaultOptions">
+            <div class="list-wrapper-item">
+                <span class="side_bar__list list-label">{{item.name}}</span>
+            </div>
+        </li>
+    </ul>
+</div>

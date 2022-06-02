@@ -1,0 +1,65 @@
+.btn_add{
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.btn_completado{
+    color: var(--color-1);
+    border: 1px solid var(--color-1);
+}
+
+.card-title{
+    background-color: var(--color-1);
+}
+
+.uil-plus-circle {
+    font-size: 4rem;
+}
+
+.uil-clipboard-notes {
+    font-size: 3rem;
+}
+
+.uil-trash-alt {
+    font-size: 2rem;
+}
+
+.pastilla:hover{
+    background-color: var(--color-5);
+}
+
+.btn_trash{
+    visibility: hidden;
+}
+
+.pastilla:hover .btn_trash{
+    visibility: visible;
+}
+
+
+.tarea {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.tarea-info {
+    color: var(--color-3);
+    font-size: 25px;
+}
+
+input[type="checkbox"] {
+    background-color: #e73649;
+    border: 1px solid white;
+}
+
+@media screen and (min-width: 0px) and (max-width: 700px) {
+    .btn_trash{
+        visibility: visible;
+    }
+}
+
+  @media screen and (min-width: 701px) and (max-width: 3000px) {
+    
+}

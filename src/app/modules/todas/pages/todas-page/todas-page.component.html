@@ -1,0 +1,38 @@
+<div class="container p-4">
+    <div class="card card-title">
+        <div class="card-body ">
+            <p class="h3 text-center text-white font-weight-bold">TODO LIST</p>
+        </div>
+    </div>
+</div>
+<div class="container py-2 px-4">
+    <div class="card">
+        <button type="button" class="btn btn_add text-left" (click)="openDialog()">
+            <i class="uil uil-plus-circle"></i>Agregar nueva tarea
+        </button>
+    </div>
+</div>
+<div class="container py-2 px-4">
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item pastilla" *ngFor="let tarea of tareas; let i=index">
+            <div class="tarea" *ngIf="tarea.descartada != true">
+                <div class="tarea-info">
+                    <i class="uil uil-clipboard-notes"></i><p [ngClass]="{'completada': tarea.completada}">{{tarea.titulo}}</p>
+                    <p [ngClass]="{'completada': tarea.completada}">{{tarea.descripcion}}</p>
+                </div>
+                <div class="tarea-boton">
+                    
+                    <div>
+                        <button type="button" class="btn btn_trash" (click)="borrarTarea(i)">
+                            <i class="uil uil-trash-alt"></i>
+                        </button>
+                    </div>
+                    <div class="check-control">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" [checked]="tarea.completada" disabled>
+                        <button class="btn btn_completado" (click)="completarTarea(i)" >COMPLETADO</button>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
