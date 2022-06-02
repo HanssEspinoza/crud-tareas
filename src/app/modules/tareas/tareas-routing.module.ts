@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
+  //Usamos Lazy Loading para cargar los componentes fuera del shared module
   {
     path: '',
     loadChildren: () => import(`@modules/todas/todas.module`).then(m => m.TodasModule)

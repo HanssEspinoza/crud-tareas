@@ -2,19 +2,17 @@
 <form>
     <label for="titulo" class="form-label">Título</label>
     <div class="mb-3 text-input">
-        <input type="text" name="titulo" [(ngModel)]="titulo" placeholder="Que tengo que hacer"
-            class="form-control" id="titulo" autofocus>
+        <input type="text" name="titulo" [(ngModel)]="titulo" placeholder="Que tengo que hacer" class="form-control" id="titulo" autofocus>
     </div>
 
     <label for="descripcion" class="form-label">Descripción</label>
     <div class="mb-3 text-input">
-        <textarea name="descripcion" [(ngModel)]="descripcion" placeholder="......"
-            class="form-control" id="descripcion" autofocus>
+        <textarea name="descripcion" [(ngModel)]="descripcion" placeholder="......" class="form-control" id="descripcion" autofocus>
         </textarea>
     </div>
     <div mat-dialog-actions>
-        <button class="btn button-close" mat-button mat-dialog-close>CANCELAR</button>
-        <button class="btn button-close" mat-button (click)="crearTarea()">AGREGAR</button>
+        <button class="btn btn_close" mat-button mat-dialog-close>CANCELAR</button>
+        <button class="btn btn_add" mat-button (click)="crearTarea()">AGREGAR</button>
     </div>
 
 </form>

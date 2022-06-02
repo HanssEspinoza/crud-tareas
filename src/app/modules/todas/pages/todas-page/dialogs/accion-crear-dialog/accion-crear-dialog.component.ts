@@ -9,6 +9,7 @@ import { Tarea } from '@core/models/Tarea';
 })
 export class AccionCrearDialogComponent implements OnInit {
 
+  //obtener tareas
   @Input() tareas:Tarea[] = [];
 
   constructor(public dialogRef: MatDialogRef<AccionCrearDialogComponent>) { }
@@ -17,10 +18,12 @@ export class AccionCrearDialogComponent implements OnInit {
   descripcion = "";
 
   ngOnInit(): void {
+    //Obtenemos los datos del localStorage
     this.tareas = JSON.parse(localStorage.getItem('tareas') || '[]');
   }
 
   crearTarea(): void{
+    //funcion para crear tareas
 
     let tarea:Tarea = {
       titulo: this.titulo,

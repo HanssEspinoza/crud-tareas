@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { TareasPageComponent } from '@modules/tareas/pages/tareas-page/tareas-page.component';
 
 const routes: Routes = [
+  //Ruta principal que sera tareas lo equivalente a un Home
   {
     path:'',
     component: TareasPageComponent,

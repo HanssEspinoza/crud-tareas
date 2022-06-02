@@ -15,6 +15,7 @@ export class SideBarComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    //Llenando MainMenu con el array de opciones por defecto para nuestro sidebar y su path 
     this.mainMenu.defaultOptions = [
       {
         name: 'TODAS',
