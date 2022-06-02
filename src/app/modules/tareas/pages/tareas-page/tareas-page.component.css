@@ -1,6 +1,6 @@
-.home-wrapper {
-    margin: 0 0 0 17.5rem;
-    min-height: 100vh;
+@media screen and (min-width: 701px) and (max-width: 3000px) {
+    .home-wrapper {
+        margin: 0 0 0 17.5rem;
+        min-height: 100vh;
+    }
 }
-
-
